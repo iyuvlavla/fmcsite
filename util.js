@@ -24,7 +24,7 @@ menber.innerHTML = mhtml;
 }
 
 function savedata(){
-    const name = document.registeruser.name.value;
+    const name = document.userregister.name.value;
     if(name != ''){
     const user = name;
     localStorage.setItem('user',user);
