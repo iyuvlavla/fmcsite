@@ -1,4 +1,3 @@
-
 function loadstrage(){
     let userdata;
 try{
@@ -8,9 +7,17 @@ try{
 }
 console.log(userdata);
 if(userdata != null){
-let section = document.getElementById('localtest');
-const rhtml = 'Hello ' + userdata;
-section.innerHTML = rhtml;
+let helloUser = document.getElementById('helloUser');
+let menber = document.getElementById('menber');
+const rhtml = '<h1>Hello ' + userdata + '</h1>';
+const menberList = ['1人目','2人目','3人目','4人目',userdata];
+let mhtml = '<ul>';
+for(let value of menberList){
+    mhtml += '<li>' + value + '</li>';
+}
+
+helloUser.innerHTML = rhtml;
+menber.innerHTML = mhtml;
 }else{
     console.log('not data');
 }
@@ -18,10 +25,10 @@ section.innerHTML = rhtml;
 
 function savedata(){
     const name = document.registeruser.name.value;
-    if(name != null){
+    if(name != ''){
     const user = name;
     localStorage.setItem('user',user);
-    console.log('save localstrage');
+    console.log('save user');
     location.reload();
     }else{
         alert('名前を入力して下さい。');
@@ -30,6 +37,6 @@ function savedata(){
 
 function removedata(){
     localStorage.removeItem('user');
-    console.log('remove localstrage');
+    console.log('remove user');
     location.reload();
 }
