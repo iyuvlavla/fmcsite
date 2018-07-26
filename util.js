@@ -9,8 +9,7 @@ try{
 console.log(userdata);
 if(userdata != null){
 let section = document.getElementById('localtest');
-const username = userdata.split(',');
-const rhtml = 'Hello ' + username[0];
+const rhtml = 'Hello ' + userdata;
 section.innerHTML = rhtml;
 }else{
     console.log('not data');
@@ -19,14 +18,13 @@ section.innerHTML = rhtml;
 
 function savedata(){
     const name = document.registeruser.name.value;
-    const mail = document.registeruser.mail.value;
-    if(name != null && mail != null){
-    const user = [name,mail];
+    if(name != null){
+    const user = name;
     localStorage.setItem('user',user);
     console.log('save localstrage');
     location.reload();
     }else{
-        alert('エラー');
+        alert('名前を入力して下さい。');
     }
 }
 
