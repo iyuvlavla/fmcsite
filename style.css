@@ -8,6 +8,7 @@ header{
     width: 100%;
     background-color: #313131;
     overflow: hidden;
+
 }
 
 header p{
@@ -16,4 +17,33 @@ header p{
     letter-spacing: 10px;
     line-height: 100px;
     padding-left: 2%;
+}
+
+input, button, textarea, select {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type="text"]{
+  width: 85px;
+}
+
+ul, ol {
+  color: #000000;
+  border-top: solid #000000 1px;
+  border-bottom: solid #000000 1px;
+  padding: 0.5em 0 0.5em 1.5em;
+}
+
+li {
+  line-height: 1.5;
+  padding: 0.5em 0;
+  list-style-type: none!important;/*ポチ消す*/
 }
